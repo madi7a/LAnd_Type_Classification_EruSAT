@@ -4,7 +4,7 @@ from tensorflow.keras.models import load_model
 from PIL import Image
 
 # Load the trained model
-model = load_model("model.keras")
+model = load_model("../resnet50.keras")
 
 st.title("Land Use Classification (EuroSAT)")
 st.write("Upload a satellite image to predict land use.")
@@ -14,7 +14,7 @@ uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "png"])
 
 if uploaded_file is not None:
     # Resize image to 224x224 to match model input size
-    image = Image.open(uploaded_file).resize((224, 224))
+    image = Image.open(uploaded_file).resize((64, 64))
 
     # Display uploaded image
     st.image(image, caption='Uploaded Image', use_column_width=True)
