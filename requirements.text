@@ -1,2 +1,2 @@
-tensorflow==2.9.0  # Or the version you're using
+tensorflow>=2.0
 streamlit==1.10.0
