@@ -4,7 +4,7 @@ from tensorflow.keras.models import load_model
 from PIL import Image
 
 # Load the trained model
-model = load_model("../resnet50.keras")
+model = load_model("resnet50.keras")
 
 st.title("Land Use Classification (EuroSAT)")
 st.write("Upload a satellite image to predict land use.")
